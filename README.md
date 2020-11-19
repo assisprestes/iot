@@ -1,4 +1,4 @@
-# iot
+# IoT
 ## projeto para matéria de objetos inteligentes conectados
 Este projeto usa um sensor de Umidade do Solo Higrômetro, que identifica as condições de um determinado solo e através do Módulo WiFi NodeMCU ESP8266 e envia o comando para irrigação, de acordo com a condição apresentada, automaticamente. Sendo programado se identificar que o solo apresentese em uma condição seca a LED vermelha acenderá e a irrigação acontece e caso se apresente úmido, a LED verde acenderá significando que as condições são boas e não ocorre a irrigação assim como essas condições são apresentadas no app MQTT Dash para um acompanhamento a distância.
 
