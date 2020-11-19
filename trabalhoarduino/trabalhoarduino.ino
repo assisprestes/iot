@@ -26,7 +26,7 @@ const char* mqttServer = "broker.mqtt-dashboard.com";   //server
 const char* mqttUser = "assis";              //user
 const char* mqttPassword = "210388";      //password
 const int mqttPort = 1883;                     //port
-const char* mqttTopicSub = "sensors/temp";      //tópico que será assinado no Broker
+const char* mqttTopicSub = "jardim/bomba";      //tópico que será assinado no Broker
 
 WiFiClient espClient;
 PubSubClient client(espClient);
@@ -100,6 +100,7 @@ void loop() {
     if (valor_analogico >= 0 && valor_analogico < 500)
     {
       Serial.println("Status: Solo umido");
+      Serial.println(valor_analogico);
     
       digitalWrite (pino_led_vermelho, LOW);
       digitalWrite (pino_led_verde, HIGH);
@@ -132,7 +133,7 @@ void loop() {
       Serial.println("Mensagem enviada com sucesso...");
   
     }
-  delay(10000);
+  delay(1000);
 
   client.loop();
 
